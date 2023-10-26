@@ -1,0 +1,26 @@
+.header{
+    background-color: lightblue;
+    color: black;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-shrink: 4;
+    font-size: 20px;
+    background-image: repeating-linear-gradient(black, black ,rgb(34, 34, 34));
+    color: rgb(211, 211, 211);
+}
+
+.header nav section .nav-link{
+    color: rgb(211, 211, 211)white;
+}
+
+.main-header-menu
+{
+    margin-left: auto;
+    order: 2;
+}
+
+header{
+    font-size: 50px;
+
+    
+}
