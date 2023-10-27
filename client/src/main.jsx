@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CreateFamily from "./pages/createFamilyPage.jsx";
-import BasicModal from "./components/modal_details.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,10 +14,6 @@ const router = createBrowserRouter([
       {
         path: "/createfamily",
         element: <CreateFamily />,
-      },
-      {
-        path: "/basicmodal",
-        element: <BasicModal />,
       },
     ],
   },

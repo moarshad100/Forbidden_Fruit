@@ -9,9 +9,6 @@
   color: white;
 }
 
-button{
-  align-self: auto;
-}
 .mx-3{
   min-height: 600px;
   display: flex;
