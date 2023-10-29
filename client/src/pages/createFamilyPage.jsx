@@ -1,10 +1,14 @@
 import "react-bootstrap/Modal";
 import { useState } from "react";
-import CreateModal from "../components/CreateModal";
+import CreateModal from "../components/AddDetailsModal";
+import AddFamily from "../components/AddFamilyModal";
+import { Button } from "@mui/material";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 function CreateFamily() {
   const [open, setOpen] = useState(false);
   const [startFamily, setStart] = useState(false);
+  const [name, setName] = useState([]);
 
   return (
     <section>
@@ -19,10 +23,24 @@ function CreateFamily() {
           display: "flex",
         }}
       >
-        <button className="openModel" onClick={() => setOpen(true)}>
+        <Button
+          variant="contained"
+          className="openModal"
+          onClick={() => setOpen(true)}
+        >
           add person
-        </button>
+        </Button>
+
         <section>{open && <CreateModal closeModal={setOpen} />}</section>
+        <NavigateNextIcon
+          id="addFamily"
+          className="addFamily"
+          onClick={() => setStart(true)}
+        >
+          +
+        </NavigateNextIcon>
+
+        <section>{startFamily && <AddFamily closeModal={setStart} />}</section>
       </section>
     </section>
   );
