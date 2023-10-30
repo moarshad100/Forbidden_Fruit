@@ -4,6 +4,13 @@ import { useState } from "react";
 
 //Create Modal for add person
 export default function CreateModal({ closeModal }) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(e.target.addname.value);
+    console.log(e.target.gender.value);
+  };
+
   return (
     <section className="modalBackground">
       <div className="modalContainer">
@@ -21,16 +28,21 @@ export default function CreateModal({ closeModal }) {
           <p>Enter Details</p>
         </div>
 
-        <form className="body">
+        <form
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+          className="body"
+        >
           {/* input for adding a person */}
 
           <input type="text" name="addname" placeholder="name" />
 
           <section>
             <label htmlFor="Male">Male</label>
-            <input type="radio" id="male" name="gender" value="MALE" />
+            <input type="radio" id="male" name="gender" value="Male" />
             <label htmlFor="Female">Female</label>
-            <input type="radio" id="Female" name="gender" value="FEMALE" />
+            <input type="radio" id="Female" name="gender" value="Female" />
           </section>
           <br />
           <div className="modalFooter">
