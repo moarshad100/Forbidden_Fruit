@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CreateFamily from "./pages/createFamilyPage.jsx";
+import MainFamily from "./pages/createMainFamily.jsx";
+import SavedFamily from "./pages/SavedFamiliesPages.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,12 @@ const router = createBrowserRouter([
 
     children: [
       {
-        path: "/createfamily",
-        element: <CreateFamily />,
+        path: "/mainfamily",
+        element: <MainFamily />,
+      },
+      {
+        path: "/savedfamily",
+        element: <SavedFamily />,
       },
     ],
   },

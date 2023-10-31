@@ -9,6 +9,10 @@ const typeDefs = `
     members: [Member]
     
   }
+  mutation :{
+    
+
+  }
 `;
 
 module.exports = typeDefs;

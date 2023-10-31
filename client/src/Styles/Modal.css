@@ -1,7 +1,8 @@
 .modalBackground {
     
     width: 200px;
-    height: 250px;
+    min-height: 280px;
+    max-height: 380px;
     background-color: rgb(212, 201, 201);
     position: fixed;
     display: flex;
@@ -13,7 +14,8 @@
   
   .modalContainer {
     width: 150px;
-    height: 200px;
+    min-height: 220px;
+    max-height: 300px;
     border-radius: 12px;
     background-color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

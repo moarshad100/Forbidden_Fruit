@@ -9,7 +9,8 @@ export default function Footer() {
   };
 
   return (
-    <section style={linkStyle}>
+    <section>
+      <hr />
       <p>Footer</p>
     </section>
   );

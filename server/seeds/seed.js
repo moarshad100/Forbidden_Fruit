@@ -12,7 +12,7 @@ db.once("open", async () => {
   const members = await Member.insertMany(memberData);
 
   for (newMember of members) {
-    // randomly add each class to a school
+    
     const tempMembers = members[Math.floor(Math.random() * members.length)];
 
     await tempMembers.save();

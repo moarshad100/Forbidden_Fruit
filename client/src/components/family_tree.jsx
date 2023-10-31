@@ -3,13 +3,22 @@ function FamilyTree() {
   const navigate = useNavigate();
 
   return (
-    <button
-      onClick={() => {
-        navigate("/createfamily");
-      }}
-    >
-      Create Family Tree
-    </button>
+    <>
+      <button
+        onClick={() => {
+          navigate("/mainfamily");
+        }}
+      >
+        Create New Family
+      </button>
+      <button
+        onClick={() => {
+          navigate("/savedfamily");
+        }}
+      >
+        Saved Family Trees
+      </button>
+    </>
   );
 }
 
