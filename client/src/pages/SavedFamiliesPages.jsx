@@ -1,5 +1,5 @@
 import CreateFamily from "../components/createFamily";
-import AddChild from "../components/addFamilyMembers/addChild";
+
 import { useState } from "react";
 
 export default function SavedFamily() {
@@ -12,5 +12,9 @@ export default function SavedFamily() {
     marginLeft: "20px",
     marginTop: "30px",
   };
-  return <>Saved</>;
+  return (
+    <section>
+      <h1>You currently have</h1>
+    </section>
+  );
 }

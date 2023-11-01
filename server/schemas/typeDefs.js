@@ -3,16 +3,19 @@ const typeDefs = `
     _id: ID
     name: String    
     gender: String
+    father:String
+    mother: String
+    spouse:String
+    child:String
     
   }
   type Query {
-    members: [Member]
-    
+    members: [Member]    
   }
-  mutation :{
-    
-
+  type Mutation{
+    addmembers(name:String!):Member
   }
+ 
 `;
 
 module.exports = typeDefs;

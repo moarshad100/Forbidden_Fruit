@@ -1,9 +1,13 @@
 [{
     "name": "Arshad",
-    "gender":"male"
+    "gender":"male",
+    "father":"jamal",
+    "mother":"deena"
 
 },
 {
     "name": "Evie",
-    "gender":"Female"
+    "gender":"Female",
+    "father":"james",
+    "mother":"lily"
 }]

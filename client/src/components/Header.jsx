@@ -5,12 +5,17 @@ function Header() {
     <header
       onMouseOver={(event) => {
         event.target.style.cursor = "pointer";
+        event.target.style.cursor = "pointer";
+        event.target.style.textDecoration = "underline";
+      }}
+      onMouseOut={(event) => {
+        event.target.style.textDecoration = "";
       }}
       onClick={() => {
         navigate("/");
       }}
     >
-      Arshad
+      FORBIDDEN FRUIT
     </header>
   );
 }

@@ -6,6 +6,11 @@ const resolvers = {
       return await Member.find({});
     },
   },
+  Mutation: {
+    addmembers: async (parent, { name }) => {
+      return Member.create({ name });
+    },
+  },
 };
 
 module.exports = resolvers;

@@ -1,13 +1,13 @@
 import "react-bootstrap/Modal";
 import { useState } from "react";
 import { Button } from "@mui/material";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+
 import React from "react";
 
 function CreateModal({ closeModal, setName }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const inputName = e.target.Father.value;
+    const inputName = e.target.addname.value;
     console.log(inputName);
     setName(inputName);
   };
@@ -55,7 +55,7 @@ function CreateFamily({ addname }) {
   const [familyTree, setFamilyTree] = useState([
     {
       id: "1",
-      name: "arshad",
+      name: "good",
       parent: ["jamal", "d"],
       children: ["haf"],
       spouse: ["rif"],
@@ -70,18 +70,14 @@ function CreateFamily({ addname }) {
           display: "flex",
         }}
       >
-        {familyTree.map((person) => {
-          return (
-            <Button
-              variant="contained"
-              className="openModal"
-              onClick={() => setOpen(true)}
-              name={addname}
-            >
-              {person.name}
-            </Button>
-          );
-        })}
+        <Button
+          variant="contained"
+          className="openModal"
+          onClick={() => setOpen(true)}
+          name={addname}
+        >
+          {name}
+        </Button>
 
         <section>
           {open && <CreateModal setName={setName} closeModal={setOpen} />}
