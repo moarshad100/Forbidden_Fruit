@@ -5,6 +5,9 @@ const resolvers = {
     allMembers: async () => {
       return await Member.find({});
     },
+    member: async (parent, { memberId }) => {
+      return Member.findOne({ _id: memberId });
+    },
   },
   Mutation: {
     addMembers: async (parent, { name }) => {

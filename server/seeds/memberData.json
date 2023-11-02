@@ -1,8 +1,9 @@
 [{
     "name": "Arshad",
-    "gender":"male",
-    "father":"jamal",
-    "mother":"deena"
+    "gender":"Male",
+    "father":"Jamal",
+    "mother":"Deena",
+    "spouse":"Rifa"
 
 },
 {

@@ -11,6 +11,7 @@ const typeDefs = `
   }
   type Query {
     allMembers: [Member]!
+    member(memberId: ID!): Member
   }
   type Mutation{
     addMembers(name:String!):Member

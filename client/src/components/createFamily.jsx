@@ -30,20 +30,10 @@ function CreateModal({ closeModal, setName }) {
         </div>
 
         <form onSubmit={handleSubmit} className="body">
-          {/* input for adding a person */}
-
           <input type="text" name="addname" placeholder="Name" />
-          {/* <button className="modal-buttons" variant="outlined">
-            Add Father
-          </button> */}
-
           <input type="text" name="Father" placeholder="Add Father" />
-          {/* <button className="modal-buttons">Add Mother</button> */}
-
           <input type="text" name="Mother" placeholder="Add Mother" />
-          {/* <button className="modal-buttons"> Add Spouse</button> */}
           <input type="text" name="Spouse" placeholder="Add Spouse" />
-          {/* <button className="modal-buttons">Add Child</button> */}
           <input type="text" name="Child" placeholder="Add Child" />
           <div className="modalFooter">
             <Button type="submit" variant="contained" className="submit">

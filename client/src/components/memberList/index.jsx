@@ -9,13 +9,14 @@ const MemberList = ({ members }) => {
   return (
     <>
       <div className="button-display">
-        {members.map((member) => (
-          <div key={member._id}>
-            <button onClick={() => setHover(true)}>
-              {member.name} <br />
-            </button>
-          </div>
-        ))}        
+        {members &&
+          members.map((member) => (
+            <div key={member._id}>
+              <button onClick={() => setHover(true)}>
+                {member.name} <br />
+              </button>
+            </div>
+          ))}
       </div>
     </>
   );
