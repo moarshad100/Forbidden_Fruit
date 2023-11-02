@@ -2,6 +2,8 @@
 
 Project 3
 
+`In this project my idea was to create a family tree`
+
 ## Technologies Used
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
