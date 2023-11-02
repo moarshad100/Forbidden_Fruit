@@ -9,23 +9,18 @@ const memberSchema = new Schema({
   },
   gender: {
     type: String,
-    required: true,
   },
   father: {
     type: String,
-    required: true,
   },
   mother: {
     type: String,
-    required: true,
   },
   spouse: {
     type: String,
-    required: false,
   },
   children: {
     type: String,
-    required: false,
   },
 });
 

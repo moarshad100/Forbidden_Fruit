@@ -33,9 +33,17 @@ function CreateModal({ closeModal, setName }) {
           {/* input for adding a person */}
 
           <input type="text" name="addname" placeholder="Name" />
+          {/* <button className="modal-buttons" variant="outlined">
+            Add Father
+          </button> */}
+
           <input type="text" name="Father" placeholder="Add Father" />
+          {/* <button className="modal-buttons">Add Mother</button> */}
+
           <input type="text" name="Mother" placeholder="Add Mother" />
+          {/* <button className="modal-buttons"> Add Spouse</button> */}
           <input type="text" name="Spouse" placeholder="Add Spouse" />
+          {/* <button className="modal-buttons">Add Child</button> */}
           <input type="text" name="Child" placeholder="Add Child" />
           <div className="modalFooter">
             <Button type="submit" variant="contained" className="submit">
@@ -50,20 +58,15 @@ function CreateModal({ closeModal, setName }) {
 
 function CreateFamily({ addname }) {
   const [open, setOpen] = useState(false);
-  const [startFamily, setStart] = useState(false);
+
   const [name, setName] = useState("Add Person");
-  const [familyTree, setFamilyTree] = useState([
-    {
-      id: "1",
-      name: "good",
-      parent: ["jamal", "d"],
-      children: ["haf"],
-      spouse: ["rif"],
-    },
-  ]);
 
   return (
-    <section>
+    <section
+      style={{
+        paddingTop: "25px",
+      }}
+    >
       <section
         style={{
           margin: "0",
@@ -76,22 +79,10 @@ function CreateFamily({ addname }) {
           onClick={() => setOpen(true)}
           name={addname}
         >
-          {name}
+          add person
         </Button>
 
-        <section>
-          {open && <CreateModal setName={setName} closeModal={setOpen} />}
-        </section>
-
-        <section>
-          {startFamily && (
-            <AddFamily
-              setFamilyTree={setFamilyTree}
-              familyTree={familyTree}
-              closeModal={setStart}
-            />
-          )}
-        </section>
+        <section>{open && <CreateModal closeModal={setOpen} />}</section>
       </section>
     </section>
   );

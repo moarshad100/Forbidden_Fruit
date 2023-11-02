@@ -1,20 +1,16 @@
-import CreateFamily from "../components/createFamily";
+import { useQuery } from "@apollo/client";
 
-import { useState } from "react";
+import MemberList from "../components/memberList";
+import { QUERY_MEMBERS } from "../utils/queries";
 
 export default function SavedFamily() {
-  const divStyle = {
-    width: "200px",
-    height: "100px",
-    borderColor: "green",
-    backgroundColor: "grey",
-    display: "flex",
-    marginLeft: "20px",
-    marginTop: "30px",
-  };
+  const { data } = useQuery(QUERY_MEMBERS);
+  const members = data?.allMembers || [];
+  console.log(members);
   return (
     <section>
-      <h1>You currently have</h1>
+      <h1>You currently have {members.length} families</h1>
+      <div>{<MemberList members={members} />}</div>
     </section>
   );
 }

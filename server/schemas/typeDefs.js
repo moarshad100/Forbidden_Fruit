@@ -10,10 +10,10 @@ const typeDefs = `
     
   }
   type Query {
-    members: [Member]    
+    allMembers: [Member]!
   }
   type Mutation{
-    addmembers(name:String!):Member
+    addMembers(name:String!):Member
   }
  
 `;

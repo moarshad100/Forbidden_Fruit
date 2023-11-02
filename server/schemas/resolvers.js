@@ -2,12 +2,12 @@ const { Member } = require("../models");
 
 const resolvers = {
   Query: {
-    members: async () => {
+    allMembers: async () => {
       return await Member.find({});
     },
   },
   Mutation: {
-    addmembers: async (parent, { name }) => {
+    addMembers: async (parent, { name }) => {
       return Member.create({ name });
     },
   },
