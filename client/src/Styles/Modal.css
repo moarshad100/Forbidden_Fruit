@@ -1,5 +1,4 @@
-.modalBackground {
-    
+.modalBackground {    
     width: 200px;
     min-height: 300px;
     max-height: 400px;
@@ -22,8 +21,7 @@
     background-color: rgb(0, 0, 0);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
   }
 
   .modalHeader{
@@ -43,15 +41,13 @@
   
   .closeBtn {    
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;    
   }
   
   .closeBtn button {
     background-color: transparent;
     border: none;    
-    cursor: pointer;
-    
+    cursor: pointer;    
   }
   
   .modalContainer .body {

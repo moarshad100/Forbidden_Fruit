@@ -1,15 +1,24 @@
 import "react-bootstrap/Modal";
 import { useState } from "react";
 import { Button } from "@mui/material";
+import { ADD_MEMBERS } from "../utils/mutations";
+import { useMutation } from "@apollo/client";
 
 import React from "react";
 
 function CreateModal({ closeModal, setName }) {
-  const handleSubmit = (e) => {
+  const [addmember, { error }] = useMutation(ADD_MEMBERS);
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const inputName = e.target.addname.value;
     console.log(inputName);
     setName(inputName);
+    try {
+      const member = await addmember({ variables: { name: inputName } });
+      console.log(member);
+    } catch (error) {
+      console.log("error");
+    }
   };
 
   return (
@@ -72,7 +81,9 @@ function CreateFamily({ addname }) {
           add person
         </Button>
 
-        <section>{open && <CreateModal closeModal={setOpen} />}</section>
+        <section>
+          {open && <CreateModal setName={setName} closeModal={setOpen} />}
+        </section>
       </section>
     </section>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Member from "../../pages/singleFamily";
 
 const MemberList = ({ members }) => {
   const [hover, setHover] = useState(false);
