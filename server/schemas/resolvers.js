@@ -10,8 +10,8 @@ const resolvers = {
     },
   },
   Mutation: {
-    addMembers: async (parent, { name }) => {
-      return Member.create({ name });
+    addMembers: async (parent, { name, father, mother, spouse, child }) => {
+      return await Member.create({ name, father, mother, spouse, child });
     },
   },
 };

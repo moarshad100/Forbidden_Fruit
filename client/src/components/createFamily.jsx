@@ -11,10 +11,23 @@ function CreateModal({ closeModal, setName }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const inputName = e.target.addname.value;
+    const inputFather = e.target.Father.value;
+    const inputMother = e.target.Mother.value;
+    const inputSpouse = e.target.Spouse.value;
+    const inputChild = e.target.Child.value;
+
     console.log(inputName);
     setName(inputName);
     try {
-      const member = await addmember({ variables: { name: inputName } });
+      const member = await addmember({
+        variables: {
+          name: inputName,
+          father: inputFather,
+          mother: inputMother,
+          spouse: inputSpouse,
+          child: inputChild,
+        },
+      });
       console.log(member);
     } catch (error) {
       console.log("error");

@@ -7,9 +7,6 @@ const memberSchema = new Schema({
     unique: true,
     trim: true,
   },
-  gender: {
-    type: String,
-  },
   father: {
     type: String,
   },
@@ -19,7 +16,7 @@ const memberSchema = new Schema({
   spouse: {
     type: String,
   },
-  children: {
+  child: {
     type: String,
   },
 });

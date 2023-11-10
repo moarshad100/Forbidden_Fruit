@@ -14,7 +14,7 @@ const typeDefs = `
     member(memberId: ID!): Member
   }
   type Mutation{
-    addMembers(name:String!):Member
+    addMembers(name:String!,father:String!,mother:String!,spouse:String!,child:String!):Member
   }
  
 `;
