@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { REMOVE_MEMBERS } from "../../utils/mutations";
-
+import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const MemberList = ({ members }) => {
@@ -14,8 +14,6 @@ const MemberList = ({ members }) => {
           memberId: memberId,
         },
       });
-
-      // Optionally, you can handle the response data if needed
       console.log("Member removed:", data);
     } catch (error) {
       console.error("Error removing member:", error.message);
@@ -32,9 +30,11 @@ const MemberList = ({ members }) => {
       <div className="button-display">
         {members.map((member) => (
           <div key={member._id}>
-            <button>
-              {member.name} <br />
-            </button>
+            <Link to={`/member/${member._id}`}>
+              <button>
+                {member.name} <br />
+              </button>
+            </Link>
             <DeleteIcon onClick={() => handleRemoveMember(member._id)} />
           </div>
         ))}

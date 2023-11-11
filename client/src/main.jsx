@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainFamily from "./pages/createMainFamily.jsx";
 import SavedFamily from "./pages/SavedFamiliesPages.jsx";
+import Member from "./pages/singleFamily.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/savedfamily",
         element: <SavedFamily />,
+      },
+      {
+        path: "/member/:memberId",
+        element: <Member />,
       },
     ],
   },

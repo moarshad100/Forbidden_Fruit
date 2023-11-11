@@ -8,11 +8,15 @@ const Member = () => {
   const { data } = useQuery(QUERY_SINGLE_MEMBER, {
     variables: { memberId: memberId },
   });
-  const singleMember = data?.singleMember || [];
-  console.log(singleMember);
+  const members = data?.member || {};
+  console.log(members);
   return (
-    <div>
-      <h2 className="card-header">{singleMember.name}</h2>
+    <div style={{ textTransform: "uppercase" }}>
+      <h2>{members.name}'s family</h2>
+      <h4 className="card-header">Father: {members.father}</h4>
+      <h4 className="card-header">Mother: {members.mother}</h4>
+      <h4 className="card-header">Spouse: {members.spouse}</h4>
+      <h4 className="card-header">Child: {members.child}</h4>
     </div>
   );
 };

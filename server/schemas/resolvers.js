@@ -1,5 +1,4 @@
 const { Member } = require("../models");
-
 const resolvers = {
   Query: {
     allMembers: async () => {
@@ -24,5 +23,4 @@ const resolvers = {
     },
   },
 };
-
 module.exports = resolvers;
