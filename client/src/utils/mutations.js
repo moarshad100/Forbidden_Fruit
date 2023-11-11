@@ -24,3 +24,11 @@ export const ADD_MEMBERS = gql`
     }
   }
 `;
+
+export const REMOVE_MEMBERS = gql`
+  mutation removeMember($memberId: ID!) {
+    removeMember(_id: $memberId) {
+      _id
+    }
+  }
+`;

@@ -15,6 +15,7 @@ const typeDefs = `
   }
   type Mutation{
     addMembers(name:String!,father:String!,mother:String!,spouse:String!,child:String!):Member
+    removeMember(_id: ID!): Member
   }
  
 `;

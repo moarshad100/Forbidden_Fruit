@@ -1,8 +1,6 @@
 import { useQuery } from "@apollo/client";
-import { useParams } from "react-router-dom";
 import MemberList from "../components/memberList";
 import { QUERY_MEMBERS } from "../utils/queries";
-
 
 export default function SavedFamily() {
   const { data } = useQuery(QUERY_MEMBERS);

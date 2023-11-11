@@ -1,7 +1,5 @@
 import CreateFamily from "../components/createFamily";
 
-import { useState } from "react";
-
 export default function MainFamily() {
   const divStyle = {
     width: "200px",
@@ -11,7 +9,6 @@ export default function MainFamily() {
     display: "flex",
     marginLeft: "20px",
     marginTop: "30px",
-    
   };
   return <CreateFamily />;
 }
